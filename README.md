@@ -1,3 +1,10 @@
+# Curso de Firebase
+
+Site criado com `Bootstrap`, `Firebase` e `Webpack` durante a realização do curso `Introdução ao Firebase` do `balta.io` para cadastro de usuários com o Banco de dados em tempo real, autenticação e armazenamento de imagens com o Storage do Firebase.
+
+- `Bootstrap` - framework CSS para a estilização do site.
+- `Webpack` - bundler que permitiu utilizar node_modules em web vanilla.
+
 # Introdução ao Firebase
 
 # O que é um BaaS?
@@ -6,7 +13,7 @@
 
 Dentro das abstrações está a `segurança da aplicação`, além da `infraestrutura`. É claro que nem tudo é 100%, mas a segurança de um ambiente OnCloud é mais reforçado que um ambiente OnPremise (servidor físico).
 
-Provê:
+Fornece:
 
 - Host.
 - Storage.
@@ -29,16 +36,16 @@ Ele fornece o seguinte:
 
 ## Prós
 
-- `Economia de Tempo:` já fornece tudo pronto, como API REST, autenticação, upload de arquivos, host etc.
-- `Isenção de responsabilidade:` muitas das vezes o programador precisa saber um pouco de tudo, como Cloud, infraestrutura etc. Com o Firebase, o desenvolvedor não é responsável por ataques, invasões etc., mas sim a Google.
+- `Economia de Tempo` - já fornece tudo pronto, como API REST, autenticação, upload de arquivos, host etc.
+- `Isenção de responsabilidade` - muitas das vezes o programador precisa saber um pouco de tudo, como Cloud, infraestrutura etc. Com o Firebase, o desenvolvedor não é responsável por ataques, invasões etc., mas sim a Google.
 - `Redução de Custos.`
-- `Alta disponibilidade:` a aplicação não cai. No Azure, por exemplo, ao subir uma aplicação ela é replicada em mais dois servidores, então se o primeiro falhar, o segundo já está em ação. Caso a aplicação seja de vendas, por exemplo, a aplicação cai durante um pico de usuário, haveria perda de dinheiro.
+- `Alta disponibilidade` - a aplicação não cai. No Azure, por exemplo, ao subir uma aplicação ela é replicada em mais dois servidores, então se o primeiro falhar, o segundo já está em ação. Caso a aplicação seja de vendas, por exemplo, a aplicação cai durante um pico de usuário, haveria perda de dinheiro.
 
 ## Contras
 
-- `Customizável, mas nem tanto:` se houver muitas regras de negócio, dificilmente é possível migrar um ERP para um BaaS.
+- `Customizável, mas nem tanto` - se houver muitas regras de negócio, dificilmente é possível migrar um ERP para um BaaS.
 - `É necessário se adequar a ele.`
-- `Dificuldade em cenários OnPremise:` como o Firebase está na nuvem, a ideia pode não ser bem aceita, pois podem preferir localmente.
+- `Dificuldade em cenários OnPremise` - como o Firebase está na nuvem, a ideia pode não ser bem aceita, pois podem preferir localmente.
 
 # Acesso ao Firebase
 
