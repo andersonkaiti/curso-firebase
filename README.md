@@ -61,7 +61,7 @@ Ao adicionar um dado, o Firebase sempre `gera um ID automaticamente`, além diss
 
 # Regras
 
-Para realizar requisições ao banco de dados e outros serviços do Firebase, é necessário `configurar as regras de acesso`. É possível `impedir` a operação read (leitura) ou write (escrita) adicionando o valor `false`, `permitir` as operações com `true` e permitir elas apenas quando o usuário estiver `autenticado` com `"auth != null"`.
+Para realizar requisições ao banco de dados e outros serviços do Firebase, é necessário `configurar as regras de acesso`. É possível `impedir` a operação read (leitura) ou write (escrita) adicionando o valor `false`, `permitir` as operações com `true` e permitir elas apenas quando o usuário estiver `autenticado` com `"auth != null"`:
 
 ```json
 {
@@ -123,7 +123,7 @@ Toda vez que uma conexão é realizada com o servidor, não estamos conectados a
 
 ## Snapshots
 
-Uma `Snapshot` é como se fosse uma `fotografia do banco de dados`. Toda vez que um dado é `atualizado` ou `inserido`, ele `tira uma foto documento`.
+Uma `Snapshot` é como se fosse uma `fotografia do banco de dados`. Toda vez que um dado é `atualizado` ou `inserido`, ele `tira uma foto documento`:
 
 ```js
 const firebase = initializeApp(firebaseConfig);
@@ -251,4 +251,41 @@ fileButton.addEventListener("change", ({ target }) => {
     }
   );
 });
+```
+
+# Firebase Tools - CLI
+
+- Conjunto de Comandos usar via Console.
+- Permite iniciar aplicativos e executar deploys.
+- Facilita o uso do Firebase.
+
+```bash
+npm i -g firebase-tools
+```
+
+# Hosting
+
+- Fornece uma hospedagem de arquivos estáticos, ou seja, apenas HTML, CSS e JavaScript.
+- A partir do `terminal`, é possível realizar o `deploy da aplicação`, então `não é necessário` realizar conexão no `servidor FTP`.
+- O `histórico de deploys` permanecem em uma lista, então caso ocorra um erro em um deploy, é possível realizar um `rollback (reverter)`, realizando o deploy da versão anterior.
+- Permite a `personalização do domínio`.
+
+É necessário realizar o login:
+
+```bash
+firebase login
+```
+
+Para inicializar o Firebase na aplicação, basta executar o seguinte comando no terminal dentro do repositório local da aplicação e responder às perguntas:
+
+```bash
+firebase init
+```
+
+Após isso, alguns arquivos serão gerados, como o `firebase.json`, com as configurações dos serviços, e o `.firebaserc`, com as configurações padrões do Firebase. Caso uma das features escolhidas nas perguntas seja o `Real-Time Database`, o comando criará um arquivo com as `regras do banco de dados` para serem armazenadas localmente.
+
+Após a configuração, basta executar o seguinte comando para realizar o `deploy`:
+
+```bash
+firebase deploy
 ```
